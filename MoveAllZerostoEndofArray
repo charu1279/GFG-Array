@@ -1,0 +1,54 @@
+/*Given an array A of positive integers. Push all the zero’s of the given array to the end of the array. while maitaining the order of non-zero elements.
+
+Input:
+The first line contains an integer T denoting the total number of test cases. In each test cases, first line is number of elements in array N and next line contains array elements.
+
+Output:
+For each testcase, in a new line, print the array after shifting all 0's to the end.​
+
+Constraints:
+1 <= T <= 100
+1 <= N <= 103
+0 <= Ai <=103
+
+Example:
+Input:
+2
+5
+3 5 0 0 4
+4
+0 0 0 4
+
+Output:
+3 5 4 0 0
+4 0 0 0
+
+Explanation:
+Testcase 1: The non-zero elements are preserve their order while the 0 elements are moved to the right.
+Testcase 1: 4 is the only non-zero element and it gets moved to the left.
+*/
+
+int t;
+	cin>>t;
+	while(t--){
+	    int n,i;
+	    cin>>n;
+	    int a[n],E[n],l=0;
+	    for(int i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	    for(i=0;i<n;i++){
+	        if(a[i]!=0){
+	            cout<<a[i]<<" ";
+	        }
+	        else{
+	            E[l++]=a[i];
+	        }
+	    }
+	    for(i=0;i<l;i++){
+	        cout<<E[i]<<" ";
+	    }
+	    cout<<"\n";
+	}
+	return 0;
+  }
